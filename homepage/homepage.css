@@ -1,0 +1,341 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d3d3d3;
+}
+
+.hero {
+    background: linear-gradient(to right, #00aaff, #004a77);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+    background-size: cover;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    margin: 0 0 15px;
+    font-size: 2.5em;
+}
+
+.hero p {
+    margin: 0 0 25px;
+    font-size: 1.2em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #f1c40f;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f39c12;
+}
+
+.alerts, .resources, .contact {
+    padding: 60px 20px;
+}
+.alerts .container ul li img{
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    
+}
+
+.alerts h2, .resources h2, .contact h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #0056b3;
+}
+
+.alert-card {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alert-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.6em;
+}
+
+.alert-card p {
+    margin: 5px 0;
+}
+
+.alert-card a.btn {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources ul li {
+    margin-bottom: 15px;
+}
+
+.resources ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.resources ul li a:hover {
+    color: #0056b3;
+}
+
+.contact form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact textarea {
+    height: 150px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #004494;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .alert-card {
+        padding: 15px;
+    }
+
+    .contact form {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 0 10px;
+    }
+}
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+    .alert-container {
+        display: flex;
+        justify-content: space-between; /* Align items with space between them */
+        align-items: flex-start; /* Align items to the start (top) */
+    }
+    
+    .alert {
+        margin-left: auto; /* Push the alert section to the right */
+        max-width: 300px; /* Optional: Limit the width of the alert section */
+    }
+    .alert .notification-container {
+        display: flex;
+        justify-content: space-between; /* Align items with space between them */
+        align-items: flex-start; /* Align items to the start (top) */
+    }
+    
+    .alert {
+        margin-left: auto; /* Push the alert section to the right */
+        max-width: 300px; /* Optional: Limit the width of the alert section */
+    }
+    
+    .current-alerts {
+        flex-grow: 1; /* Take up remaining space */
+        margin-right: 20px; /* Add some space on the right side of the container */
+    }
+    /* Basic reset */
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color:#0056b3;
+    padding: 20px;
+}
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffdddd;
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notification-content {
+    text-align: center;
+}
+
+.notification h2 {
+    color: #d8000c;
+    margin-bottom: 10px;
+}
+
+.notification p {
+    margin-bottom: 20px;
+}
+
+.notification button {
+    background-color: #d8000c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.notification button:hover {
+    background-color: #b2000d;
+}
+
+footer p{
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+footer p{
+    width:100%;
+    height:100vh;
+    background-color:#0056b3;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

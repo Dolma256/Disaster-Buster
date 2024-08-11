@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Event</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <div class="event-container">
+        <h1>Add Event</h1>
+        <div class="image-box">
+            <label for="image-upload" class="image-label">Click to Upload Image</label>
+            <input type="file" id="imageInput" class="image-upload" accept="image/*">
+        </div>
+        <div id="preview">
+            <img id="imagePreview" src="" alt="Image Preview" style="display: none; max-width: 100%; height: 100px;">
+        </div>
+        <div class="event-details">
+    <h3>Location:</h3>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1747.4568279803639!2d85.31741151443967!3d27.73458696456562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb195f16fd418d%3A0x668f5ebb8d47fcca!2sWhite%20Pearl%20Light%20Manpower%20Services!5e0!3m2!1sen!2snp!4v1723339329143!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+            <div class="help-awareness">
+                <h3>Help and Awareness</h3>
+                <p>If you need assistance or want to contribute to the cause, please contact our helplines:</p>
+                <ul class="helplines">
+                  <a href="tel.100">  <li>Emergency Helpline: 100</li>
+                    <li>Support Line: 1-800-123-4567</li>
+                    <li>Volunteer & Donations: 1-800-765-4321</li>
+                    </a>
+                </ul>
+               <a href="/final page/final.html"><button type="submit">Submit</button></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const imageInput = document.getElementById('imageInput');
+        const imagePreview = document.getElementById('imagePreview');
+
+        imageInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                }
+
+                reader.readAsDataURL(file);
+            } else {
+                imagePreview.style.display = 'none';
+                imagePreview.src = '';
+            }
+        });
+    </script>
+</body>
+</html>
